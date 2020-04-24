@@ -1,0 +1,42 @@
+﻿@model Great_Groomer.Models.GroomService
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GroomService</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceCost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ServiceDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ServiceDuration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GroomServiceID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

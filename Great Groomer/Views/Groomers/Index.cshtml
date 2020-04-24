@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Great_Groomer.Models.Groomer>
+
+@{
+    ViewBag.Title = "Groomers";
+}
+
+<h2>Groomers</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GroomerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroomerDOB)
+        </th>
+        <th>
+            Rate (¢)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroomerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroomerDOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroomerRate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GroomerID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.GroomerID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GroomerID })
+            </td>
+        </tr>
+    }
+
+</table>

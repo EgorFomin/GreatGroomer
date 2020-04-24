@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Great_Groomer.Models.GroomBooking>
+
+@{
+    ViewBag.Title = "Groom Bookings";
+}
+
+<h2>Groom Bookings</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Groomer
+        </th>
+        <th>
+            Service
+        </th>
+        <th>
+            Owner
+        </th>
+        <th>
+            Pet Name
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Price ($)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroomBookingID)
+            </td>
+            <td>
+                @(@Html.DisplayFor(modelItem => item.Groomer.FirstName) + " " + @Html.DisplayFor(modelItem => item.Groomer.LastName))
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroomService.ServiceName)
+            </td>
+            <td>
+                @(@Html.DisplayFor(modelItem => item.Owner.FirstName) + " " + @Html.DisplayFor(modelItem => item.Owner.LastName))
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pet.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GroomBookingDate)
+            </td>
+            <td>
+                @(Math.Round((double)item.GroomBookingPrice/100, 2))
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GroomBookingID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.GroomBookingID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GroomBookingID })
+            </td>
+        </tr>
+    }
+
+</table>

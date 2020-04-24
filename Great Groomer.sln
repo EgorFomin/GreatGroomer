@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Great Groomer", "Great Groomer\Great Groomer.csproj", "{0A4688BF-5031-43FB-B675-1DD563813EAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A4688BF-5031-43FB-B675-1DD563813EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4688BF-5031-43FB-B675-1DD563813EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4688BF-5031-43FB-B675-1DD563813EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4688BF-5031-43FB-B675-1DD563813EAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {228F442C-AD0F-43AB-A385-DF2CECF2A34C}
+	EndGlobalSection
+EndGlobal

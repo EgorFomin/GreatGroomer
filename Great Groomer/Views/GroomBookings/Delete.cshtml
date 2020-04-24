@@ -1,0 +1,72 @@
+﻿@model Great_Groomer.Models.GroomBooking
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GroomBooking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Groomer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Groomer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroomService.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroomService.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pet.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pet.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroomBookingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroomBookingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroomBookingPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroomBookingPrice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

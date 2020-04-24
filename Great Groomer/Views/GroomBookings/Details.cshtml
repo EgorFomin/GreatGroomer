@@ -1,0 +1,66 @@
+﻿@model Great_Groomer.Models.GroomBooking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GroomBooking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Groomer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Groomer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroomService.ServiceName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroomService.ServiceName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Owner.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Owner.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pet.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pet.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroomBookingDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroomBookingDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroomBookingPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroomBookingPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GroomBookingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
